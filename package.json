@@ -1,0 +1,12 @@
+{
+  "name": "about-me",
+  "version": "2.1.8",
+  "description": "About me landing page",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ./style.scss ./result.css"
+  },
+  "keywords": [],
+  "author": "Maxim Kolotovkin",
+  "license": "ISC"
+}

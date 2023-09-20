@@ -1,0 +1,331 @@
+$var-text-font-main: Geneva, Arial, Helvetica, sans-serif;
+
+$var-basic-font-size: 22px;
+
+$var-color-background: #7939ee;
+$var-color-top-block: #ff9f3f;
+$var-color-ligth-text: #ffffff;
+$var-images-shadow-color-light: #4bbfef;
+$var-color-box-with-services: #ffffff;
+$var-color-header-in-services-box: #7939ee;
+$var-color-services-elements-cells: #4bbfef;
+$var-text-color-main: #121212;
+$var-light-background-color: #ffffff;
+$var-a-links-color: #4bbfef;
+
+$var-color-gradient-a: #7939ee;
+$var-color-gradient-b: #4bbfef;
+
+html {
+    font-size: $var-basic-font-size;
+    font-family: $var-text-font-main;
+    color: $var-text-color-main;
+}
+
+body {
+    font-size: $var-basic-font-size;
+    font-family: $var-text-font-main;
+    color: $var-text-color-main;
+}
+
+body {
+    background: $var-color-background;
+    padding: 0;
+    margin: 0;
+}
+
+.bold-text-class {
+    font-weight: bold;
+}
+
+#id-top-block {
+    background: $var-color-top-block;
+    color: $var-color-ligth-text;
+    margin-top: 0;
+}
+
+#id-top-block {
+    padding: 2rem;
+    font-size: 2rem;
+
+    .long-label-class {
+        display: inline;
+    }
+
+    .short-label-class {
+        display: none;
+    }
+
+    @media (max-width: 1400px) {
+        padding: 1.7rem;
+        font-size: 1.7rem;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 1.4rem;
+        font-size: 1.4rem;
+    }
+    
+    @media (max-width: 1000px) {
+        padding: 1.1rem;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 800px) {
+        padding: 1.1rem;
+        font-size: 1.1rem;
+
+        .long-label-class {
+            display: none;
+        }
+    
+        .short-label-class {
+            display: inline;
+        }
+    }
+}
+
+.class-background-gradient {
+    background-image: linear-gradient(to bottom right, $var-color-gradient-a, $var-color-gradient-b);
+}
+
+#id-main-info-box {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    column-gap: 0;
+    justify-content: center;
+    align-items: center;
+    color: $var-color-ligth-text;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    background-image: linear-gradient(to bottom right, $var-color-gradient-a, $var-color-gradient-b);
+
+    @media (max-width: 1100px) {
+        grid-template-columns: 90%;
+        padding-top: 0.1rem;
+    }
+
+    .left-box-class {
+        font-size: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        
+        @media (max-width: 1400px) { font-size: 2.7rem; }
+        @media (max-width: 1250px) { font-size: 2.4rem; }
+        @media (max-width: 1100px) { 
+            font-size: 2.7rem; 
+            text-align: center;
+        }
+        @media (max-width: 950px) { 
+            font-size: 2.3rem; 
+            text-align: center;
+        }
+        @media (max-width: 700px) { 
+            font-size: 2rem; 
+            text-align: center;
+        }
+        @media (max-width: 450px) { 
+            font-size: 1.5rem; 
+            text-align: center;
+        }
+    }
+
+    .right-box-class {
+        text-align: center;
+
+        img {
+            max-width: 31rem;
+            @media (max-width: 1500px) { max-width: 28rem; }
+            @media (max-width: 1350px) { max-width: 24rem; }
+            @media (max-width: 1100px) { max-width: 31rem; }
+            @media (max-width: 850px) { max-width: 26rem; }
+            @media (max-width: 700px) { 
+                width: 96%;
+            }
+        }
+    }
+}
+
+#id-box-list-with-services {
+    background: $var-color-box-with-services;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    .header-class {
+        display: inline-block;
+        font-size: 2.5rem;
+        color: $var-color-header-in-services-box;
+        padding-bottom: 1.5rem;
+
+        @media (max-width: 1100px) { font-size: 2.2rem; }
+        @media (max-width: 800px) { font-size: 1.9rem; }
+        @media (max-width: 500px) { font-size: 1.6rem; }
+        @media (max-width: 400px) { font-size: 1.4rem; }
+        @media (max-width: 350px) { font-size: 1.2rem; }
+    }
+
+    #id-services-3-elems-list-box {
+        display: grid;
+        grid-template-columns: 28% 28% 28%;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+        justify-content: center;
+
+        @media (max-width: 1350px) {
+            grid-template-columns: 70%;
+        }
+
+        @media (max-width: 800px) {
+            grid-template-columns: 90%;
+        }
+
+        .elem-service-class {
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0.6rem;
+            background: $var-color-box-with-services;
+            border: 4px solid $var-color-services-elements-cells;
+
+            .card-header-class {
+                padding: 1rem;
+                font-size: 1.4rem;
+                color: $var-color-ligth-text;
+                background: $var-color-services-elements-cells;
+            }
+
+            .card-content-class {
+                text-align: left;
+                background: $var-color-box-with-services;
+                display: inline-block;
+                padding: 1rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.class-box-about-description {
+    padding-top: 1.5rem;
+    padding-bottom: 1.7rem;
+
+    .header-secription-class {
+        font-size: 2rem;
+        color: $var-color-ligth-text;
+        display: block;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        @media (max-width: 900px) { font-size: 1.7rem; }
+        @media (max-width: 750px) { font-size: 1.5rem; }
+        @media (max-width: 550px) { font-size: 1.3rem; }
+        @media (max-width: 450px) { font-size: 1.1rem; }
+    }
+
+    .class-table-description-about {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        column-gap: 2rem;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 1100px) {
+            grid-template-columns: 90%;
+        }
+
+        .left-element-class-description {
+            color: $var-color-ligth-text;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .right-element-class-description {
+            text-align: center;
+            img {
+                max-width: 22rem;
+                @media (max-width: 1500px) { max-width: 19rem; }
+                @media (max-width: 1350px) { max-width: 16rem; }
+                @media (max-width: 1100px) { max-width: 22rem; }
+                @media (max-width: 850px) { max-width: 17rem; }
+                @media (max-width: 700px) { 
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+.class-separator-with-header {
+    background: $var-light-background-color;
+    color: $var-color-header-in-services-box;
+    padding: 2rem;
+    margin: 0;
+    display: block;
+    text-align: center;
+
+    p {
+        padding: 0;
+        margin: 0;
+        display: block;
+        font-size: 2rem;
+
+        @media (max-width: 1100px) { font-size: 1.7rem; }
+        @media (max-width: 900px) { font-size: 1.5rem; }
+        @media (max-width: 700px) { font-size: 1.2rem; }
+    }
+}
+
+.class-image-circled {
+    border-radius: 50%;
+}
+
+.class-light-box-light-back {
+    background: $var-light-background-color;
+}
+
+.class-dark-text-with-important-class {
+    color: $var-text-color-main !important;
+}
+
+a {
+    text-decoration: underline;
+    font-style: italic;
+    color: $var-a-links-color !important;
+    cursor: pointer;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@keyframes animation-scale-image {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% {  transform: scale(1); }
+}
+
+.class-animation-scale-image-class {
+    animation-name: animation-scale-image;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.class-started-trasform-position {
+    transform: translate(200px, 0px);
+    opacity: 0;
+}
+
+.class-started-begin-left-offset-pos {
+    transform: translate(-200px, 0px);
+    opacity: 0;
+}
+
+.class-animation-image-appear-class {
+    transition-property: transform, opacity;
+    transition-duration: 2.5s;
+    transition-timing-function: ease;
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
